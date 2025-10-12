@@ -12,7 +12,7 @@
 export interface Transaction {
   id: number; //might have to recheck this one
   amount: number;
-  category?: any; // it would have to flexible to the user
+  category?: string; // it would have to flexible to the user
   description: string;
   date: Date;
 }
