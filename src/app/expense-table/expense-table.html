@@ -1,6 +1,16 @@
 <div class="card">
 
-  <p-table [value]="transactions">
+  <p-toolbar>
+    <button pButton *ngFor="let item of items"
+              severity="secondary"
+              (click)="item.command && item.command({})">              
+      <i [class]="item.icon">
+      </i>
+    </button>
+  </p-toolbar>
+  <p-table class="transaction-table" 
+            [value]="transactions"
+            stripedRows>
   <ng-template pTemplate="header">
     <tr>
       <th>Date</th>
